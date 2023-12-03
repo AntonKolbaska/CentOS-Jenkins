@@ -18,7 +18,7 @@ import java.io.PrintWriter;
 import java.util.List;
 
 @WebFilter(filterName = "AuthenticationFilter",
-        urlPatterns = {"/*"} )
+        urlPatterns = {"/tryingtodisblefilter/*"} )
 public class AuthFilter extends HttpFilter {
 
     private final List<String> ALLOWED_URL = List.of("/login", "/workstation");
