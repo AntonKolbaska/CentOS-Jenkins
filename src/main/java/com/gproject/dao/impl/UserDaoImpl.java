@@ -262,6 +262,8 @@ public class UserDaoImpl implements UserDao<User, Integer> {
 
 //        connection.ifPresent(conn -> {
         try (Connection conn = JdbcConnection.getInstance().getConnection();
+            conn.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
+             
              PreparedStatement statement = conn.prepareStatement(sql)) {
 
 
